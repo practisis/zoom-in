@@ -1,0 +1,707 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
+	<link rel="icon" type="image/png" href="assets/img/favicon.png">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<head data-noxhrfix>
+	<title>Cateyal Pagina 1</title>
+
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+
+	<!--     Fonts and icons     -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+
+	<!-- CSS Files -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/material-kit.css" rel="stylesheet"/>
+	<style>
+		.listas:hover{
+			background-color:#F44336;
+			color:#fff;
+			cursor:pointer;
+		}
+	</style>
+	<link rel="stylesheet" href="font-awesome/font-awesome/css/font-awesome.min.css">
+	<script>
+		<!-- (function($) {  	 -->
+			<!-- $.get = function(key)   {   -->
+				<!-- key = key.replace(/[\[]/, '\\[');   -->
+				<!-- key = key.replace(/[\]]/, '\\]');   -->
+				<!-- var pattern = "[\\?&]" + key + "=([^&#]*)";   -->
+				<!-- var regex = new RegExp(pattern);   -->
+				<!-- var url = unescape(window.location.href);   -->
+				<!-- var results = regex.exec(url);   -->
+				<!-- if (results === null) {   -->
+					<!-- return null;   -->
+				<!-- } else {   -->
+					<!-- return results[1];   -->
+				<!-- }   -->
+			<!-- }   -->
+		<!-- })(jQuery);   -->
+		
+	</script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-qrcode-0.14.0.js"></script>
+	<script src="js/scripts.js"></script>
+</head>
+
+<body class="signup-page" onload="init();" style="background-image: url('assets/img/city.JPG'); background-size: cover; background-position: top center;">
+	<nav class="navbar navbar-transparent navbar-absolute">
+    	<div class="container">
+        	<!-- Brand and toggle get grouped for better mobile display -->
+        	<div class="navbar-header">
+        		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example" onclick="verMenu()">
+            		<span class="sr-only">Toggle navigation</span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span> 
+		            <span class="icon-bar"></span>
+        		</button>
+        		<a class="navbar-brand" href="javascript:void();">
+					<!--<img src = 'http://ticketfacil.ec/ticket2/gfx/logo.png' style = 'width:100px;'/>-->
+					<!--<i class="material-icons" style="color:#9c27b0;">&#xE84F;</i>Cateyal-->
+					<img src="assets/img/logoC.png" style="width:100px;">
+				</a>
+        	</div>
+
+
+        	<div class="collapse navbar-collapse" id="navigation-example">
+        		<ul class="nav navbar-nav navbar-right">
+                   
+                    
+                    <li class="active all" id="2">
+                       <!-- <a href="http://demos.creative-tim.com/material-dashboard-pro/examples/pages/login.html">-->
+                        <a name="enlace" onclick = 'salir()' >
+                            <i class="material-icons" style="color:#9c27b0;"></i> Salir
+                        </a>
+                    </li>
+					
+					<!--<li class="all" id="1"> 
+                        <a href="http://demos.creative-tim.com/material-dashboard-pro/examples/pages/register.html">
+                        <a name="enlace" onclick="reconfigura(1);">
+                            <i class="material-icons" style="color:#9c27b0;">person_add</i> Registrate
+                        </a>
+                    </li>-->
+					
+					
+                    <!--  
+					<li class="all" id = '3' >
+						<a href="http://demos.creative-tim.com/material-dashboard-pro/examples/pages/lock.html">
+                        <a href="#" onclick = 'reconfigura(3);'>
+                            <i class="material-icons">lock_open</i> Lock
+                        </a>
+                    </li>-->
+                </ul>
+        	</div>
+    	</div>
+    </nav>
+
+    <div class="wrapper">
+		<div class="header header-filter" >
+			<div class="container">
+				<br>
+				<div class="row">
+					<div class="col-md-3"></div>
+					<div class="col-md-6">
+						<div class="card card-signup" style = 'background-color: rgba(255,255,255,0.7)'>
+							
+								<div class="header header-danger text-center" style="background-color:#9c27b0;">
+									<h4>Tu alimentación en las mejores manos!</h4>
+								</div>
+								
+								<div class = 'row'>
+									
+									<div class = 'col-md-12'>
+										<center>
+											<button onclick = "$('#modal1').modal('show') , $('#modal2').modal('hide') , $('#modal3').modal('hide') , $('#modal4').modal('hide') , menu()"class="btn btn-danger botones_" data-toggle="modal" data-target="#myModal">
+												&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-fire" aria-hidden="true"></i>  Menú<label style = 'color:#F44336;display:none;'> del dia</label>
+												<div class="ripple-container"></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+											</button>
+										</center>
+									</div>
+									
+									
+									<div class = 'col-md-12'>
+										<center>
+											<button id = 'boton_base' onclick = "$('#modal1').modal('hide') , $('#modal2').modal('hide') , $('#modal3').modal('show') , $('#modal4').modal('hide') , tips()"class="btn btn-danger botones_" data-toggle="modal" data-target="#myModal">
+												<i class="fa fa-fire" aria-hidden="true"></i>  Tips Nutricionales
+												<div class="ripple-container"></div>
+											</button>
+										</center>
+									</div>
+									
+									<div class = 'col-md-12'>
+										
+										<center>
+											<button onclick = "$('#modal1').modal('hide') , $('#modal2').modal('show') , $('#modal3').modal('hide') , $('#modal4').modal('hide') , doqr()" class="btn btn-danger botones_" data-toggle="modal" data-target="#myModal">
+												&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-fire" aria-hidden="true"></i> &nbsp;&nbsp;&nbsp;Código QR&nbsp;&nbsp;&nbsp;
+												<div class="ripple-container"></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+											</button>
+										</center>
+									</div>
+									<div class = 'col-md-12' id = 'cateyalLink' >
+										<center>
+											<button   onclick = "$('#modal1').modal('hide') , $('#modal2').modal('hide') , $('#modal3').modal('hide') , $('#modal4').modal('show') , telefonos()" class="btn btn-danger botones_" data-toggle="modal" data-target="#myModal">
+												&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-fire" aria-hidden="true"></i> &nbsp;&nbsp;&nbsp;Cateyal 2018
+												<div class="ripple-container"></div>&nbsp;&nbsp;&nbsp;&nbsp;
+											</button>
+										</center>
+									</div>
+								</div>
+								<br><br><br>
+							
+						</div>
+					</div>
+					<div class="col-md-3"></div>
+				</div>
+			</div>
+
+		</div>
+
+    </div>
+<style>
+		#cateyalLink:hover{
+			color:#ef5350;
+		}
+		.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
+			padding: 8px;
+			line-height: 1.42857143;
+			vertical-align: top;
+			border-top: 0 !important;
+		}
+		.tabless{
+			width:100%;
+		}
+		
+		/* ::-webkit-scrollbar { width: 15px; height: 15px;}
+		::-webkit-scrollbar-button {  background-color: #D63333; }
+		::-webkit-scrollbar-track {  background-color: #D63333;}
+		::-webkit-scrollbar-track-piece { background-color: #ffffff;}
+		::-webkit-scrollbar-thumb { height: 50px; background-color: #D63333; border-radius: 3px;}
+		::-webkit-scrollbar-corner { background-color: #D63333;}}
+		::-webkit-resizer { background-color: #D63333;} */
+
+		::-webkit-scrollbar {  
+			width: 12px;  
+		}  
+		::-webkit-scrollbar-track {  
+			background-color: #ccc;  
+			border-left: 1px solid #ccc;  
+		}  
+		::-webkit-scrollbar-thumb {  
+			background-color: #D63333;  
+		}  
+		::-webkit-scrollbar-thumb:hover {  
+			background-color: #aaa;  
+		}  
+	</style>
+	<div data-keyboard="false" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog" style = 'margin-left:0px;margin-right:0px;'>
+			<div class="modal-content">
+				<div class="modal-header">
+					<button onclick = "window.location=''" type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title">Menú del Día</h4>
+				</div>
+				<div class="modal-body" id = 'recibeMenu2'>
+					<div style = 'overflow-x:scroll;' id = 'contieneMenu'>
+						<center><img src="menu.png" alt="image" class="img-rounded" id="target1" style='width:70%;'/></center><br/>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<div class = 'col-md-12' id = 'coordenadas' style = 'display:none;'></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		function saberTamanoVentana(){
+			var anchoVentana = $(window).width();
+			$('#contieneMenu').css('max-width',(parseInt(anchoVentana) - parseInt(40)));
+			<!-- alert(anchoVentana); -->
+		}
+		$(document).ready(function(){
+			saberTamanoVentana();
+		})
+		
+		$(window).resize(function(){
+			saberTamanoVentana();
+		});
+		// Log events flag
+		var logEvents = false;
+
+		// Touch Point cache
+		var tpCache = new Array();
+		
+		
+		function set_handlers(name) {
+			// Install event handlers for the given element
+			var el=document.getElementById(name);
+			el.ontouchstart = start_handler;
+			el.ontouchmove = move_handler;
+			// Use same handler for touchcancel and touchend
+			el.ontouchcancel = end_handler;
+			el.ontouchend = end_handler;
+		}
+
+		function init() {
+			set_handlers("target1");
+			set_handlers("target2");
+			set_handlers("target3");
+			set_handlers("target4");
+		}
+		
+		
+		// This is a very basic 2-touch move/pinch/zoom handler that does not include
+		// error handling, only handles horizontal moves, etc.
+		function handle_pinch_zoom(ev) {
+
+			if (ev.targetTouches.length == 2 && ev.changedTouches.length == 2) {
+				// Check if the two target touches are the same ones that started
+				// the 2-touch
+				var point1=-1, point2=-1;
+				for (var i=0; i < tpCache.length; i++) {
+					if (tpCache[i].identifier == ev.targetTouches[0].identifier) point1 = i;
+					if (tpCache[i].identifier == ev.targetTouches[1].identifier) point2 = i;
+				}
+				if (point1 >=0 && point2 >= 0) {
+					// Calculate the difference between the start and move coordinates
+					var diff1 = Math.abs(tpCache[point1].clientX - ev.targetTouches[0].clientX);
+					var diff2 = Math.abs(tpCache[point2].clientX - ev.targetTouches[1].clientX);
+
+					// This threshold is device dependent as well as application specific
+					var PINCH_THRESHHOLD = ev.target.clientWidth / 10;
+					if (diff1 >= PINCH_THRESHHOLD && diff2 >= PINCH_THRESHHOLD)
+					ev.target.style.background = "green";
+					
+					
+					var tamano = $('#target1').width();
+					$('#coordenadas').html('target ' + PINCH_THRESHHOLD + ' <br/> tamaño de la imagen : ' + tamano + ' <br/> posicion dedo 1 : ' + point1 + ' <br/> posicion dedo 2 : ' + point2 + ' <br/> deferencia dedo 1 : ' + diff1 + ' <br/> diferencia dedo 2 : ' + diff2);
+					
+					if(point2 > point1 ){
+						$('#target1').css('width',(parseInt(tamano) + parseInt(30)));
+						$('#target1').css('border','2px solid red');
+					}else{
+						$('#target1').css('width',(parseInt(tamano) - parseInt(30)));
+						$('#target1').css('border','2px solid green');
+					}
+					
+					
+					
+				}
+				else {
+				// empty tpCache
+					
+					var tamano = $('#target1').width();
+					
+					
+					$('#coordenadas').html('tamaño de la imagen : ' + tamano + ' <br/> posicion dedo 1 : ' + point1 + ' <br/> posicion dedo 2 : ' + point2 + ' <br/> deferencia dedo 1 : ' + diff1 + ' <br/> diferencia dedo 2 : ' + diff2);
+					
+					
+					
+					tpCache = new Array();
+				}
+			}
+		}
+		
+		
+		function start_handler(ev) {
+			// If the user makes simultaneious touches, the browser will fire a 
+			// separate touchstart event for each touch point. Thus if there are 
+			// three simultaneous touches, the first touchstart event will have 
+			// targetTouches length of one, the second event will have a length 
+			// of two, and so on.
+			ev.preventDefault();
+			// Cache the touch points for later processing of 2-touch pinch/zoom
+			if (ev.targetTouches.length == 2) {
+				for (var i=0; i < ev.targetTouches.length; i++) {
+					tpCache.push(ev.targetTouches[i]);
+				}
+			}
+			if (logEvents) log("touchStart", ev, true);
+			update_background(ev);
+		}
+		
+		function move_handler(ev) {
+			// Note: if the user makes more than one "simultaneous" touches, most browsers 
+			// fire at least one touchmove event and some will fire several touchmoves.
+			// Consequently, an application might want to "ignore" some touchmoves.
+			//
+			// This function sets the target element's border to "dashed" to visually
+			// indicate the target received a move event.
+			//
+			ev.preventDefault();
+			if (logEvents) log("touchMove", ev, false);
+			// To avoid too much color flashing many touchmove events are started,
+			// don't update the background if two touch points are active
+			if (!(ev.touches.length == 2 && ev.targetTouches.length == 2))
+			update_background(ev);
+
+			// Set the target element's border to dashed to give a clear visual
+			// indication the element received a move event.
+			ev.target.style.border = "dashed";
+
+			// Check this event for 2-touch Move/Pinch/Zoom gesture
+			handle_pinch_zoom(ev);
+		}
+		
+		
+		function end_handler(ev) {
+			ev.preventDefault();
+			if (logEvents) log(ev.type, ev, false);
+			if (ev.targetTouches.length == 0) {
+				// Restore background and border to original values
+				ev.target.style.background = "white";
+				ev.target.style.border = "1px solid black";
+			}
+		}
+		
+		function update_background(ev) {
+			// Change background color based on the number simultaneous touches
+			// in the event's targetTouches list:
+			//   yellow - one tap (or hold)
+			//   pink - two taps
+			//   lightblue - more than two taps
+			switch (ev.targetTouches.length) {
+				case 1:
+				// Single tap`
+				<!-- ev.target.style.background = "yellow"; -->
+				break;
+				case 2:
+				// Two simultaneous touches
+				<!-- ev.target.style.background = "pink"; -->
+				break;
+				default:
+				// More than two simultaneous touches
+				<!-- ev.target.style.background = "lightblue"; -->
+			}
+		}
+		
+		
+		function enableLog(ev) {
+			logEvents = logEvents ? false : true;
+		}
+
+		function log(name, ev, printTargetIds) {
+			var o = document.getElementsByTagName('output')[0];
+			var s = name + ": touches = " + ev.touches.length + " ; targetTouches = " + ev.targetTouches.length + " ; changedTouches = " + ev.changedTouches.length;
+			o.innerHTML += s + " ";
+
+			if (printTargetIds) {
+				s = "";
+				for (var i=0; i < ev.targetTouches.length; i++) {
+					s += "... id = " + ev.targetTouches[i].identifier + " ";
+				}
+				o.innerHTML += s;
+			}
+		} 
+
+		function clearLog(event) {
+			var o = document.getElementsByTagName('output')[0];
+			o.innerHTML = "";
+		}
+		
+		function cambiarTamano(ident){
+			
+			if(ident == 1){
+				var anchoImg = $('#target1').width();
+				var altoImg = $('#target1').height();
+				
+				$('#target1').css('width',(parseInt(anchoImg) - parseInt(10)))
+				$('#target1').css('height',(parseInt(altoImg) - parseInt(10)))
+				
+			}else if(ident == 2){
+				
+				var anchoImg2 = $('#target1').width();
+				var altoImg2 = $('#target1').height();
+				<!-- alert(parseInt(anchoImg2) +'+'+ parseInt(10)) -->
+				$('#target1').css('width',(parseInt(anchoImg2) + parseInt(10)))
+				$('#target1').css('height',(parseInt(altoImg2) + parseInt(10)))
+			}
+			
+			<!-- alert(anchoImg + ' << >> ' + altoImg) -->
+		}
+	</script>
+	
+	
+	<div class="modal fade" id="modal2" data-keyboard="false" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-md">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title">Código QR</h4>
+				</div>
+				<div class="modal-body" style ="background-color: #fff;text-align: center">
+					<div id="container"></div>
+					
+					<div style = 'display:none;'>
+						<div class="control left">
+						<a id="banner" href="https://larsjung.de/jquery-qrcode/">jQuery.qrcode 0.14.0</a>
+						<hr>
+						<label for="render">RENDER MODE</label>
+						<select id="render">
+							<option value="canvas" selected="selected">canvas</option>
+							<option value="image">image</option>
+							<option value="div">div</option>
+						</select>
+						<hr>
+						<label for="size">SIZE:</label>
+						<input id="size" type="range" value="400" min="100" max="1000" step="50">
+						<label for="fill">FILL</label><input id="fill" type="color" value="#333333">
+						<label for="background">BACKGROUND</label>
+						<input id="background" type="color" value="#ffffff">
+						<label for="text">CONTENT</label>
+						
+						
+						<textarea id="text">22</textarea>
+						<hr>
+						<label for="minversion">MIN VERSION:</label>
+						<input id="minversion" type="range" value="6" min="1" max="10" step="1">
+						<label for="eclevel">ERROR CORRECTION LEVEL</label>
+						<select id="eclevel">
+							<option value="L">L - Low (7%)</option>
+							<option value="M">M - Medium (15%)</option>
+							<option value="Q">Q - Quartile (25%)</option>
+							<option value="H" selected="selected">H - High (30%)</option>
+						</select>
+						<label for="quiet">QUIET ZONE:</label>
+						<input id="quiet" type="range" value="1" min="0" max="4" step="1">
+						<label for="radius">CORNER RADIUS:</label>
+						<input id="radius" type="range" value="50" min="0" max="50" step="10">
+					</div>
+					
+					<div class="control right">
+						<label for="mode">MODE</label>
+						<select id="mode">
+							<option value="0" selected="selected">0 - Normal</option>
+							<option value="1">1 - Label-Strip</option>
+							<option value="2" >2 - Label-Box</option>
+							<option value="3">3 - Image-Strip</option>
+							<option value="4">4 - Image-Box</option>
+						</select>
+						
+						<hr>
+						<label for="msize">SIZE:</label>
+						<input id="msize" type="range" value="11" min="0" max="40" step="1">
+						<label for="mposx">POS X:</label>
+						<input id="mposx" type="range" value="50" min="0" max="100" step="1">
+						<label for="mposy">POS Y:</label>
+						<input id="mposy" type="range" value="50" min="0" max="100" step="1">
+						
+						<hr>
+						<label for="label">LABEL</label>
+						<input id="label" type="text" value="jQuery.qrcode">
+						<label for="font">FONT NAME</label>
+						<input id="font" type="text" value="Ubuntu">
+						<label for="fontcolor">FONT COLOR</label>
+						<input id="fontcolor" type="color" value="#ff9818">
+						
+						<hr>
+						<label for="image">IMAGE</label>
+						<input id="image" type="file">
+					</div>
+					</div>
+					<!--<i class="fa fa-qrcode fa-5x" aria-hidden="true"></i>-->
+					<!--<div id="qrdiv">
+					    
+					  <form name="qrinp" style = "display:none;">
+					    <input type="button" value="Go"/>
+					    ECC Level (1-4)
+					    <input type="numeric" name="ECC" value="1" size="1"><br>
+					    Text:<textarea name="qrinput" size=2953>Hello World!</textarea><br>
+					  </form>
+					    <canvas id="qrcanv"/>No Canvas Support?
+					</div>-->
+				</div>
+				<div class="modal-footer">
+					
+					
+				</div> 
+			</div>
+		</div>
+	</div>
+	
+	<div class="modal fade" id="modal3" data-keyboard="false" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title">TIPS NUTRICIONALES</h4>
+				</div>
+				<div class="modal-body" id = 'recibeTips'>
+					<!--<iframe src = 'http://www.lcodigo.com/cateyal_paginal/tips.php' frameborder = '0' width = '100%' height = '430px' ></iframe>-->
+					<h4><b>Importancia de una buena nutrición en niños</b></h4>
+						<p>Una adecuada nutrición es primordial para los 
+					niños, ya que están en etapa de crecimiento y 
+					desarrollo</p>
+						<p><b>Beneficios de una buena nutrición:</b></p>
+						<ul class="list-group">
+							<li class="list-group-item listas">Nivel de energía adecuado para realizar todas las actividades diarias</li>
+							<li class="list-group-item listas">Óptima formación dehuesos, dientes y músculos fuertes</li>
+							<li class="list-group-item listas">Mejor sistema inmune para combatir enfermedades</li>
+							<li class="list-group-item listas">Mejor desempeño escolar</li>
+							<li class="list-group-item listas">Mayor capacidad de concentración</li>
+							<li class="list-group-item listas">Peso saludable para su estatura</li>
+						</ul>
+				</div>
+				<div class="modal-footer">
+					
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	
+	<div class="modal fade" id="modal4" data-keyboard="false" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title">CATEYAL 2018</h4>
+				</div>
+				<div class="modal-body" id = 'recibeTelefonos'>
+					
+				</div>
+				<div class="modal-footer">
+					
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+	<!--   Core JS Files   -->
+	<script src="assets/js/jquery.min.js" type="text/javascript"></script>
+	<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="assets/js/material.min.js"></script>
+
+	<!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+	<script src="assets/js/nouislider.min.js" type="text/javascript"></script>
+
+	<!--  Plugin for the Datepicker, full documentation here: http://www.eyecon.ro/bootstrap-datepicker/ -->
+	<script src="assets/js/bootstrap-datepicker.js" type="text/javascript"></script>
+
+	<!-- Control Center for Material Kit: activating the ripples, parallax effects, scripts from the example pages etc -->
+	<script src="assets/js/material-kit.js" type="text/javascript"></script>
+	<script>
+		
+		function telefonos(){
+			$.post("http://www.lcodigo.com/cateyal_paginal/telefonos.php",{ 
+					
+			}).done(function(data){
+				$('#recibeTelefonos').html(data);
+			});
+		}
+		function menu(){
+			<!-- alert('va') -->
+			var fecha=new Date();
+			var dias = new Array('domingo','lunes','martes','miercoles','jueves','viernes','sabado')
+			var diaA = dias[fecha.getDay()];
+			$.post("http://www.lcodigo.com/cateyal_paginal/menu.php",{ 
+				diaA : diaA
+			}).done(function(data){
+				<!-- alert('viene') -->
+				$('#target1').attr('src',data);
+				
+				<!-- var anchoMenu2 = $('#cuerpoMenu2').width(); -->
+				<!-- var altoMenu2 = (parseInt(anchoMenu2)-parseInt(100)) -->
+				
+				<!-- var anchoFlecha1 = $('#izq').width(); -->
+				<!-- var anchoFlecha2 = $('#der').width(); -->
+				
+				<!-- var achoFlechas = ((parseInt(anchoFlecha1)*2) + (parseInt(anchoFlecha2)*2)); -->
+				<!-- <!-- alert(anchoMenu2 +'<<>>'+ anchoFlecha1 +'>><<'+ anchoFlecha2 ) --> -->
+				<!-- var altoMenu2 = (parseInt(anchoMenu2)-parseInt(100)) -->
+				
+				<!-- $('#cuerpoMenu').css('width',(parseInt(anchoMenu2) - parseInt(achoFlechas))); -->
+				<!-- $('#cuerpoMenu').css('height',altoMenu2); -->
+				
+				
+				
+				<!-- var anchoMenu = $('#target1').width(); -->
+				<!-- var altoMenu = $('#target1').height(); -->
+				
+				<!-- $('#recibeMenu').css('width',anchoMenu); -->
+				<!-- $('#recibeMenu').css('height',altoMenu); -->
+			});
+		}
+		
+		function tips(){
+			$.post("http://www.lcodigo.com/cateyal_paginal/tips.php",{ 
+					
+			}).done(function(data){
+				$('#recibeTips').html(data);
+			});
+		}
+		$(document).ready(function(){
+			
+			setTimeout(function(){
+				menu();
+				tips();
+			}, 1000);
+		})
+		
+		
+		
+		function valida_datos(){
+				var e = $('#username').val();
+				var email = $('#username').val();
+				var p = $('#password').val();
+				
+				if(e == ''){
+					$('#username').attr('placeholder','su username es requerido');
+				}
+				
+				if(p == ''){
+					$('#password').attr('placeholder','su pass es requerido');
+				}
+				
+				if(e == '' || p == ''){
+					
+				}else{
+					$('#ya_logueado').html('Espere, validadando sus datos');
+					
+					if(e == 'cateyal' && p == '123456'){
+						$('#ya_logueado').html('Ingresar');
+						window.location = 'pagina1.html';
+					}else{
+						$('#ya_logueado').html('Ingresar');
+						alert('el usuario : ' + email + ' no esta registrado en nuestro sistema');
+					}
+				}
+				
+			}
+		function parametroURL(_par) {
+		  var _p = null;
+		  if (location.search) location.search.substr(1).split("&").forEach(function(pllv) {
+			var s = pllv.split("="), //separamos llave/valor
+			  ll = s[0],
+			  v = s[1] && decodeURIComponent(s[1]); //valor hacemos encode para prevenir url encode
+			if (ll == _par) { //solo nos interesa si es el nombre del parametro a buscar
+			  if(_p==null){
+			  _p=v; //si es nula, quiere decir que no tiene valor, solo textual
+			  }else if(Array.isArray(_p)){
+			  _p.push(v); //si ya es arreglo, agregamos este valor
+			  }else{
+			  _p=[_p,v]; //si no es arreglo, lo convertimos y agregamos este valor
+			  }
+			}
+		  });
+		  return _p;
+		}
+		var cedula = parametroURL('cedula');
+		<!-- alert(cedula) -->
+		$('#text').val(cedula)
+		
+		localStorage.setItem("cedula", cedula);
+		
+		function salir(){
+			localStorage.setItem("cedula", 'null');
+			window.location = 'index.html';
+		}
+	</script>
+</html>
